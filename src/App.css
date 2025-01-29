@@ -1,0 +1,209 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+  background-color:gainsboro !important;
+  height: 100%;
+}
+.background{
+
+  background-color:gainsboro  ;
+}
+
+.bgcat{
+  color:green
+}
+.btn-css{
+  width:8rem;
+  height:6rem;
+}
+.hovgen:hover{
+  border:2px solid green!important;
+ 
+}
+
+.hover:hover{
+  background-color: gray !important;
+}
+.dishbtnHover {
+  width: 95% !important;
+  border: 2px solid black !important;
+}
+.dishbtnHover:hover{
+  border:1px solid black !important;
+}
+
+.allcards {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+   
+}
+.shimmerUi{
+  display:flex;
+  flex-wrap: wrap;
+  margin-left:100px;
+ 
+}
+.details {
+  text-align: center;
+  width: 100%;
+}
+.box{
+  width:230px;
+  height: 250px;
+  background-color: rgb(207, 201, 201);
+  margin:20px;
+
+}
+
+.toast{
+  z-index: 500;
+  position: fixed;
+  
+  padding:4px  !important;
+  border:2px solid black  !important;
+  animation:toast 4s ease-in;
+  
+
+  box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.1)!important;
+  
+  color:black  !important;
+  display: none;
+
+
+}
+
+@keyframes toast{
+  0%{
+    transform: translateX(120%)!important;
+    opacity:0
+  }
+  20%{
+    transform: translateX(120%);
+    opacity:0
+  }
+  100%{
+    transform: translateX(120%);
+    opacity:1
+  }
+}
+
+
+ .CartSection{
+   width: 50%;
+  min-height: 80%; 
+  height: auto;
+  border:2px solid whitesmoke;
+  border-radius: 10px ;
+  position: absolute;
+  z-index: 500;
+  right: 3rem;;
+  background-color:rgb(207, 201, 201);
+
+} 
+
+.line-item {
+  display: flex;
+  justify-content: space-between;
+  margin-left:2rem;
+  margin-right:2rem;
+}
+.SigninForm
+{
+  z-index: 600;
+  padding:10px;
+  border: 2px solid black;
+  position: fixed;
+  top:22%;
+  left: 40%;
+  text-align: center;
+  background-color: darkkhaki;
+}
+.cross{
+  position: absolute;
+  top:0;
+  right: 1rem;;
+  background:transparent;
+  border: none;
+}
+
+/*responsive layout */
+
+/* only for mobile phones */
+@media (max-width: 575.98px)
+ { 
+  same as tablets
+  *{
+font-size: 11px;
+  }
+  .buttong{
+    flex-wrap: wrap;
+  }
+  .toast {
+    top:40%;
+    left:40%;
+   }
+ }
+
+/* landscape phone and tablets */
+
+@media (max-width: 767.98px) { 
+  *{
+    font-size: 12px;
+  }
+  same with deletebtn
+  .buttong{
+    flex-wrap: wrap;
+  }
+  .AllCardsSection li{
+    font-size: 11px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center !important;
+    & img{
+      margin-left: 40%!important;
+    }
+  }
+  
+ }
+
+/* tablets  */
+
+@media (max-width: 991.98px) { 
+  *{
+    font-size: 13px;
+  }
+ 
+  .CartProfile{
+      
+      position: absolute;
+      top:2%;
+  }
+  .buttong{
+    flex-wrap: wrap;
+  }
+ .toast{
+  top:40%;
+  left:40%;
+ }
+ @keyframes toast{
+  0%{
+    transform: translateX(-50%,-50%)!important;
+    opacity:0
+  }
+  20%{
+    transform: translateX(-50%,-50%);
+    opacity:0
+  }
+  100%{
+    transform: translateX(-50%,-50%);
+    opacity:1
+  }
+}
+ }
