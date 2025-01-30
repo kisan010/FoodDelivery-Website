@@ -7,7 +7,7 @@ import { Filter } from './Filter';
 
                  
 export const Search = () => {
-   const [searchDish,setSearchDish]=useState('KFC');
+   const [searchDish,setSearchDish]=useState('');
    const {setfilterCardProvider}=useContext(DishContext);
    const { Alldishes}=useContext(DishContext);
 

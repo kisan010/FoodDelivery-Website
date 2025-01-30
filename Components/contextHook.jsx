@@ -11,6 +11,7 @@ export const DishProvider = ({ children }) => {
   const [active, setActive] = useState(false);
   const [arrCart,setarrCart]=useState([]);
   const [toastColor, setToastColor] = useState('');
+  const [theme,settheme]=useState('gainsboro');
   
   return (
     <DishContext.Provider
@@ -27,7 +28,8 @@ export const DishProvider = ({ children }) => {
         arrCart,
         setarrCart,
         toastColor,
-        setToastColor
+        setToastColor,
+        theme,settheme
       }}
     >
       {children}

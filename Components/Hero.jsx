@@ -3,15 +3,19 @@ import { Food_items } from "../Api/Menulist";
 import { Dishcard } from "./dishCard";
 import { Shimmer } from "./shimmerUi";
 import { DishContext } from "./contextHook";
+import { FallbackUi} from "./Fallbackui";
 
 
 export const Hero = () => {
   const { filterCardProvider, setfilterCardProvider } = useContext(DishContext);
   const { Alldishes,setAlldishes}=useContext(DishContext);
 
+
   useEffect(() => {
     getDishinfo();
   }, []);
+
+
 
    function getDishinfo() {
     
@@ -25,6 +29,7 @@ export const Hero = () => {
       console.log(err);
     }
   }
+  console.log(filterCardProvider);
  if(!Alldishes) return null;
   return Alldishes.length === 0 ? (
     <Shimmer />
@@ -32,10 +37,15 @@ export const Hero = () => {
     <>
       <div className="mx-5 adjustment">
         <div className="d-flex  flex-wrap   ">
-          {filterCardProvider.map((items) => {
+
+          {  
+            filterCardProvider.length=== 0 ?<FallbackUi />:
+          filterCardProvider.map((items) => {
             let { id } = items;
             return <Dishcard {...items} key={id} />;
-          })}
+          })
+          
+        }
         </div>
       </div>
     </>

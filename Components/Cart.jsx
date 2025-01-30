@@ -13,6 +13,7 @@ export const Cart = () => {
   const { updateToast}=useContext(DishContext);
   const {  setToastColor } = useContext(DishContext);
   const {setActive}=useContext(DishContext)
+  const {theme}=useContext(DishContext);
 
   useEffect(() => {
     const storedItems = localStorage.getItem("DishItems");
@@ -99,7 +100,7 @@ export const Cart = () => {
         <span>{arrCart && arrCart.length}</span>
       </button>
       <div
-        className="CartSection text-end "
+        className={`CartSection text-end ${theme==='black'&& 'bg-secondary.bg-gradient'}  `}
         style={{ display: Cartshow ? "block" : "none" }}
       >
         <h4 className="float-start text-success ms-3 ">OrderItems</h4>
@@ -140,7 +141,7 @@ export const Cart = () => {
                     }
                   >
                     <button className="  btn btn-primary">+</button>
-                    <span className=" mt-2 bg-secondary-subtle p-2 border border-1 rounded">
+                    <span className={`text-dark mt-2 bg-secondary-subtle p-2 border border-1 rounded`}>
                       {items?.food_quantity}{" "}
                     </span>
                     <button className=" btn btn-secondary">-</button>

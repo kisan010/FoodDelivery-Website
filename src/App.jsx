@@ -12,8 +12,9 @@ import { Food_category } from '../Components/Menu.jsx';
 import { DishProvider } from '../Components/contextHook.jsx';
 import { Footer } from '../Components/Footer.jsx';
 
-function App() {
 
+function App() {
+  
   return (
     <>
     
