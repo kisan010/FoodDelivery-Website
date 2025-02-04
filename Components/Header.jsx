@@ -19,15 +19,15 @@ export const Header=()=>{
         <>
         <div className="container-fluid text-center py-4">
             <div className="row">
-                <div className="col-xl-2 col-lg-2">
+                <div className="col-xl-2 col-lg-2  order-sm-1">
                     <h1 className='text-start'> 
-                        <button className='px-2  border-0 shadow-lg bg-transparent '>
+                        <button className='px-2  border-0    shadow-lg bg-transparent '>
                         <FontAwesomeIcon icon={faCookie} className='bgcat' bounce /></button> </h1>
                 </div>
-                <div className="col-xl-7 col-lg-7">
+                <div className="col-xl-7 col-lg-7 order-sm-1">
                <Search />
                 </div>
-                <div className="col-xl-3 col-lg-3 d-flex justify-content-around CartProfile">
+                <div className="col-xl-3 col-lg-3 mt-3 d-flex justify-content-around CartProfile  order-sm-2">
                     <UserProfile />
                     <Cart />
                     <Theme />

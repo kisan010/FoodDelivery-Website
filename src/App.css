@@ -76,7 +76,8 @@ body{
   
   color:black  !important;
   display: none;
-
+ top:auto;
+ left:auto
 
 }
 
@@ -124,6 +125,7 @@ body{
   position: fixed;
   top:22%;
   left: 40%;
+  margin:auto;
   text-align: center;
   background-color: darkkhaki;
 }
@@ -140,7 +142,7 @@ body{
 /* only for mobile phones */
 @media (max-width: 575.98px)
  { 
-  same as tablets
+  
   *{
 font-size: 11px;
   }
@@ -148,8 +150,12 @@ font-size: 11px;
     flex-wrap: wrap;
   }
   .toast {
-    top:40%;
-    left:40%;
+    top:22% !important;
+    left:10% !important;
+   }
+   .SigninForm{
+    top:22%;
+    left:10%;
    }
  }
 
@@ -159,7 +165,7 @@ font-size: 11px;
   *{
     font-size: 12px;
   }
-  same with deletebtn
+  /* same with deletebtn */
   .buttong{
     flex-wrap: wrap;
   }
@@ -182,11 +188,11 @@ font-size: 11px;
     font-size: 13px;
   }
  
-  .CartProfile{
+  /* .CartProfile{
       
       position: absolute;
       top:2%;
-  }
+  } */
   .buttong{
     flex-wrap: wrap;
   }
